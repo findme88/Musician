@@ -2,8 +2,8 @@
   background: url('../images/header-bg.jpg') no-repeat top center;
   background-size: cover;
   height: 100vh;
-  @include f-center ();
-  
+  @include f-center();
+
   &__block {
     display: flex;
     align-items: center;
@@ -11,26 +11,18 @@
   }
 }
 
-@mixin posit {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-}
-
 .navigation {
   width: 100%;
-  background: rgba( 0, 8, 12, .1);
+  background: rgba(0, 8, 12, .1);
   overflow: hidden;
-  position: fixed;
-  @include pos(fixed, $t:0, $l:0, $z:99 );
+  @include pos(fixed, $t: 0, $l: 0, $z: 99);
 
   &__menu {
-    @include pos(fixed, $t:15px, $r:3%, $z:99);
-    background: rgba (255, 255, 255, .9);
+    @include pos(fixed, $t: 15px, $r: 3%, $z: 99);
+    background: rgba(255, 255, 255, .9);
     padding: 10px;
     transition: .3s;
-    
+
     @media (min-width: $desktop) {
       display: none;
     }
@@ -50,11 +42,13 @@
           }
 
           &::before {
-            transform: rotate(47deg);;
+            transform: rotate(47deg);
+            left: 3px;
           }
 
           &::after {
-            transform: rotate(-47deg);;
+            transform: rotate(-47deg);
+            left: 3px;
           }
         }
       }
@@ -71,18 +65,18 @@
 
   @media (max-width: $desktop) {
     @include pos(fixed, $z: 1, $t: 0, $r: -250px);
-    @include size (250px, 100%);
-    background: rgba (255, 255, 255, .9);
+    @include size(250px, 100%);
+    background: rgba(255, 255, 255, .9);
     transition: .3s;
     padding-top: 25px;
     display: block;
   }
-  
 
-  &__item {
+  &__item  {
     text-transform: uppercase;
     margin: 0 20px;
     text-align: center;
+    font: 17px $dosis;
   }
 
   &__link {
@@ -95,7 +89,7 @@
 
     @media (max-width: $desktop) {
       display: block;
-      padding: 20px;
+      padding: 20px, 0;
       font-size: 18px;
     }
 
@@ -105,7 +99,7 @@
       background: #000;
       transition: .3s;
       content: '';
-      
+
       @media (max-width: $desktop) {
         display: none;
       }
@@ -119,6 +113,7 @@
       }
     }
   }
+  
 }
 
 .burger-menu {
@@ -126,12 +121,12 @@
     background: #bebebe;
     border-radius: 3px;
     position: absolute;
-    top: $top;
     transition: .3s;
-    @include size( 100%, 5px)
+    top: $top;
+    @include size(100%, 5px);
   }
 
-  @include size (50px, 40px);
+  @include size(50px, 40px);
   display: block;
   position: relative;
 
@@ -140,9 +135,9 @@
   }
 
   span {
-  display: block;
-  transform: translateY(-50%);
-  @include line(50%);
+    display: block;
+    transform: translateY(-50%);
+    @include line(50%);
   }
 
   &::before {
@@ -155,5 +150,33 @@
     @include line(calc(100% - 5px));
     content: '';
     transform-origin: 0 100%;
+  }
+}
+
+.scroll {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 25px;
+  font-size: 35px;
+  position: relative;
+  top: 0;
+  left: 5px;
+  transition: .3s;
+  animation: scroll-arrow 1.5s ease-in-out infinite;
+
+  &:hover {
+    color: $hover;
+  }
+}
+
+@keyframes scroll-arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
   }
 }
