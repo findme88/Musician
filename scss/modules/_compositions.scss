@@ -8,10 +8,12 @@
 
   &__info {
     position: relative;
+    
   }
-
+  
   &__block {
     padding: 30px;
+   
   }
 
   &__title {
@@ -34,9 +36,12 @@
   }
 
   &__video {
+    
     iframe {
       @include size(100%);
       min-height: 300px;
     }
-  }
+    
+      }
+     
 }
