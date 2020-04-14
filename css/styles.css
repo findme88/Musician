@@ -215,9 +215,9 @@ body {
     left: 0;
   }
   50% {
-    left: 20px;
-    -webkit-transform: scale(-1, 1.5);
-            transform: scale(-1, 1.5);
+    left: 30px;
+    -webkit-transform: scale(-1, 2.5);
+            transform: scale(-1, 2.5);
   }
   100% {
     left: 0;
@@ -231,9 +231,9 @@ body {
     left: 0;
   }
   50% {
-    left: 20px;
-    -webkit-transform: scale(-1, 1.5);
-            transform: scale(-1, 1.5);
+    left: 30px;
+    -webkit-transform: scale(-1, 2.5);
+            transform: scale(-1, 2.5);
   }
   100% {
     left: 0;
@@ -361,6 +361,10 @@ body {
   width: 15px;
   height: 15px;
   fill: currentColor;
+}
+
+.social__icon .icon:hover {
+  fill: #62a2ad;
 }
 
 .header {
@@ -682,12 +686,6 @@ body {
   position: relative;
 }
 
-.audio__info:nth-last-child(2) .audio__info {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
 .audio__block {
   padding: 30px;
 }
@@ -725,9 +723,5 @@ body {
 
 .contact h1 {
   font-size: 39px;
-}
-
-.audio:nth-last-child(2) .audio__info {
-  order: 1;
 }
 /*# sourceMappingURL=styles.css.map */

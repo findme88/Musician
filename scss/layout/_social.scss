@@ -24,6 +24,10 @@
             @include size(15px);
             fill: currentColor;
         }
-        
+        .icon:hover {
+         fill:$hover;
+        }
     }
+
+    
 }
