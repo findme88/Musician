@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1.1;
+  line-height: 1;
 }
 
 ol, ul {
@@ -349,6 +349,10 @@ body {
   margin-bottom: 0;
 }
 
+.social__item:hover {
+  color: #62a2ad;
+}
+
 .social__icon {
   color: currentColor;
   text-decoration: none;
@@ -361,10 +365,6 @@ body {
   width: 15px;
   height: 15px;
   fill: currentColor;
-}
-
-.social__icon .icon:hover {
-  fill: #62a2ad;
 }
 
 .header {

@@ -11,6 +11,10 @@
             margin-bottom: 0;
         }
 
+        &:hover {
+            color: $hover;
+        }
+        
     }
 
     &__icon {
@@ -24,9 +28,7 @@
             @include size(15px);
             fill: currentColor;
         }
-        .icon:hover {
-         fill:$hover;
-        }
+       
     }
 
     
