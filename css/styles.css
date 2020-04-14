@@ -686,6 +686,12 @@ body {
   position: relative;
 }
 
+.audio:nth-last-child(2) .audio__info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 .audio__block {
   padding: 30px;
 }

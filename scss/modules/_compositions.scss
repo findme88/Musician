@@ -9,6 +9,12 @@
   &__info {
     position: relative;
   }
+  
+  &:nth-last-child(2) {
+    .audio__info {
+      order: 1;
+    }
+  }
 
   &__block {
     padding: 30px;
