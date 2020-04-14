@@ -13,6 +13,10 @@
   &:nth-last-child(2) {
     .audio__info {
       order: 1;
+
+      @media (max-width: $mobile) {
+        order: 0;
+      }
     }
   }
 

@@ -13,8 +13,9 @@
 
         &:hover {
             color: $hover;
+            transition: .5s;
         }
-        
+
     }
 
     &__icon {
@@ -27,6 +28,10 @@
         .icon {
             @include size(15px);
             fill: currentColor;
+        }
+        .icon:hover{
+            @include size (17px);
+            transition: .5s;
         }
        
     }

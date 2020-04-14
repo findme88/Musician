@@ -351,6 +351,8 @@ body {
 
 .social__item:hover {
   color: #62a2ad;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .social__icon {
@@ -365,6 +367,13 @@ body {
   width: 15px;
   height: 15px;
   fill: currentColor;
+}
+
+.social__icon .icon:hover {
+  width: 17px;
+  height: 17px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .header {
@@ -690,6 +699,14 @@ body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@media (max-width: 767px) {
+  .audio:nth-last-child(2) .audio__info {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
 
 .audio__block {
